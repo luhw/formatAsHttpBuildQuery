@@ -1,4 +1,4 @@
-const formatParams = (() => {//格式化参数以进行Md5加密
+var formatParams = (() => {
 
     var Type = {},
         store = {};
@@ -12,7 +12,6 @@ const formatParams = (() => {//格式化参数以进行Md5加密
     }
 
     return function format(params) {
-        debugger
         for (var key in params) {
             if (Type.isObject(params[key]) || Type.isArray(params[key])) {
                 for (var seckey in params[key]) {
